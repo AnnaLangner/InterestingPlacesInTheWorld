@@ -8,12 +8,55 @@ body {
 			min-height: 250px;
 			margin-right: 10px;
 			background-size: cover;
+			counter-increment: gallery-cell;
+			background: silver;
 
 			.container {
 				width: 1200px;
 				text-align: center;
 			}
 
+			.flickity-prev-next-button {
+				width: 100px;
+				height: 100px;
+				background: transparent;
+				.arrow {
+					fill: white;
+				}
+				.no-svg {
+					color: white;
+				}
+				&:hover {
+					background: transparent;
+				}
+				&:disabled {
+					display: none;
+				}
+			}
 		}
 	}
 }
+
+
+/* 
+//big buttons, no circle 
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+//arrow color
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+//hide disabled button 
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+*/
