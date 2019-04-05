@@ -32,6 +32,7 @@
   "homepage": "https://github.com/AnnaLangner/nauka_gita_2#readme",
   "dependencies": {
     "flickity": "^2.2.0",
+    "flickity-hash": "^1.0.3",
     "mkdirp": "^0.5.1",
     "normalize.css": "^8.0.1",
     "superagent": "^3.7.0"
