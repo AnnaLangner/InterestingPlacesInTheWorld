@@ -1,10 +1,11 @@
 body {
 	.button-carousel {
-		position: absolute;
+		
 		margin-bottom: 20px;
 	}
 
 	.main-carousel {
+		margin-bottom: 50px;
 
 		.carousel-cell {
 			width: 100%;
@@ -14,29 +15,20 @@ body {
 			background-size: cover;
 			counter-increment: gallery-cell;
 			background: silver;
+			overflow: hidden;
 
 			.container {
 				width: 1200px;
 				text-align: center;
 			}
 
-			.flickity-prev-next-button {
-				width: 100px;
-				height: 100px;
-				background: transparent;
-				.arrow {
-					fill: white;
-				}
-				.no-svg {
-					color: white;
-				}
-				&:hover {
-					background: transparent;
-				}
-				&:disabled {
-					display: none;
-				}
+			.flickity-page-dots {
+				display: none;
 			}
+		}
+
+		img {
+			display: block;
 		}
 	}
 
@@ -45,4 +37,10 @@ body {
 		width: 0;
 		background: #333;
 	}
+}
+
+@media screen and ( min-width: 768px ) {
+  .main-carousel img {
+    height: 400px;
+  }
 }
