@@ -50,7 +50,7 @@
 		<div class="progress-bar"></div>
 
 		<script>
-		var productsData = [
+		var carouselData = [
 			{
 				image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Grand-canyone-west.jpg/1280px-Grand-canyone-west.jpg",
 				title : "Grand Canyone",
@@ -77,6 +77,10 @@
 				description : "<p>An Amazon River cruise is a river cruise like no other on Earth. The Amazon Rainforest is the largest tropical rainforest in the world and its mighty namesake river, the longest, a meandering aortic life force to 9 different countries.</p>"
 			}
 		];
+		</script>
+
+		<script id="template-carousel-item" type="x-tmpl-mustache">
+			<li> {{ image }} {{ title }} {{ description }}</li>
 		</script>
     
 
