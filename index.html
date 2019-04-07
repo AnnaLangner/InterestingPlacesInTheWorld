@@ -23,11 +23,13 @@
 		<div class="progress-bar"></div>
 
 		<script id="template-carousel-slide" type="x-tmpl-mustache">
-			 	<img src="{{image}}">
+			<div class="carousel-cell">
+			 <img src="{{image}}">
  				<div class="container">
  					<h2>{{ title }}</h2>
  					{{{ description }}}
  				</div>
+ 			</div>
 		</script>
 
 		<script>

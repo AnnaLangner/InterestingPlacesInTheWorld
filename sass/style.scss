@@ -16,15 +16,30 @@ body {
 			counter-increment: gallery-cell;
 			background: #f4f4f2;
 			overflow: hidden;
+			position: relative;
 
 			.container {
 				width: 1200px;
 				text-align: center;
+
+				p {
+					position: absolute;
+					top: 40%; 
+					left: 15%; 
+					z-index: 1;
+				}
+				h2 {
+					position: absolute;
+					top: 5%; 
+					left: 50%; 
+					z-index: 1;
+				}
 			}
 		}
 
 		img {
 			display: block;
+			height: 50vh;
 		}
 	}
 
