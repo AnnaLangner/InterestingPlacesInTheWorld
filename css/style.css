@@ -1,6 +1,6 @@
 body { /* transparent circles */ /* fill-in selected dot */ }
 
-body .button-carousel { margin-bottom: 20px; }
+body .button-carousel { display: inline-block; margin-bottom: 20px; }
 
 body .main-carousel { margin-bottom: 50px; }
 
