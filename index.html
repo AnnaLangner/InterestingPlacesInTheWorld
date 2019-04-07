@@ -15,45 +15,23 @@
 		</div>
 
 		<div class="main-carousel" data-flickity>
- 			<div class="carousel-cell" id="carousel-cell1">
- 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Grand-canyone-west.jpg/1280px-Grand-canyone-west.jpg" alt="Grand Canyone">
- 				<div class="container">
- 					<h2>{{ title }}</h2>
- 					<p> {{ description }} </p>
- 				</div>
- 			</div>
- 			<div class="carousel-cell" id="carousel-cell2">
- 			<img src="https://dreamgo.pl/wp-content/uploads/2016/12/Polinezja-Francuska-Moorea-Hilton-Moorea-Lagoon-Aerial-3-1.jpg" alt="Bora bora">
- 				<div class="container">
- 					<h2>{{ title }}</h2>
- 					<p> {{ description }} </p>
- 				</div>
- 			</div>
- 			<div class="carousel-cell" id="carousel-cell3">
- 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Cetatea_Poenari_1.jpg/1920px-Cetatea_Poenari_1.jpg" alt="Poenari Citadel">
- 				<div class="container">
- 					<h2>{{ title }}</h2>
- 					<p> {{ description }} </p>
- 				</div>
- 			</div>
- 			<div class="carousel-cell" id="carousel-cell4">
- 			<img src="https://assets.change.org/photos/1/ol/ff/FoOlffAJfEhQamJ-800x450-noPad.jpg?1490147017" alt="Great Barrier Reef">
- 				<div class="container">
- 					<h2>{{ title }}</h2>
- 					<p> {{ description }} </p>
- 				</div>
- 			</div>
- 			<div class="carousel-cell" id="carousel-cell5">
- 			<img src="https://www.aquaexpeditions.com/wp-content/uploads/2017/12/New-8-2016-Aria-Amazon-Cruise-1-High-Resolution.jpg" alt="Amazon River">
- 				<div class="container">
- 					<h2>{{ title }}</h2>
- 					<p> {{ description }} </p>
- 				</div>
- 			</div>
+			<div id="results">
+				<script id="template-carousel" type="x-tmpl-mustache">
+				{{{carousel}}}
+				</script>
+			</div>
 		</div>
 
 		<div class="progress-bar"></div>
 
+		<script id="template-carousel-slide" type="x-tmpl-mustache">
+			 	<img src="{{image}}">
+ 				<div class="container">
+ 					<h2>{{ title }}</h2>
+ 					<p> {{{ description }}} </p>
+ 				</div>
+		</script>
+		
 		<script>
 		var carouselData = [
 			{
@@ -84,13 +62,11 @@
 		];
 		</script>
 
-		<script id="template-carousel-item" type="x-tmpl-mustache">
-			<li> {{ image }} {{ title }} {{ description }}</li>
-		</script>
+		
     
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="js/mustache.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
 	</body>
 </html>

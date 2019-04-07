@@ -1,3 +1,6 @@
+'use strict';
+(function(){ 
+
 var carousel = document.querySelector('.main-carousel');
 var flkty = new Flickity( carousel, {
   cellAlign: 'left',
@@ -34,13 +37,23 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
-var templateItem = document.getElementById('template-carousel-item').innerHTML;
+var templateCarousel = document.getElementById('template-carousel').innerHTML;
+var templateSlide = document.getElementById('template-carousel-slide').innerHTML;
 
-Mustache.parse(templateItem);
+Mustache.parse(templateSlide);
 
-var listItems = '';
+var listSlide = '';
 
 for(var i = 0; i < carouselData.length; i++){
-	console.log(carouselData);
-	listItems += Mustache.render(templateItem, carouselData[i]);
+	console.log(carouselData[i]);
+	listSlide += Mustache.render(templateSlide, carouselData[i]);
+
 }
+
+var fullCarousel = Mustache.render(templateSlide, {carousel: listSlide});
+
+var results = document.getElementById('results');
+
+results.insertAdjacentHTML('beforeend', fullCarousel );
+
+})(); 
