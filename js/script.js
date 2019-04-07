@@ -33,3 +33,14 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+var templateItem = document.getElementById('template-carousel-item').innerHTML;
+
+Mustache.parse(templateItem);
+
+var listItems = '';
+
+for(var i = 0; i < carouselData.length; i++){
+	console.log(carouselData);
+	listItems += Mustache.render(templateItem, carouselData[i]);
+}
