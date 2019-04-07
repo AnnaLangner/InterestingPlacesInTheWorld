@@ -14,16 +14,12 @@ body {
 			margin-right: 10px;
 			background-size: cover;
 			counter-increment: gallery-cell;
-			background: silver;
+			background: #f4f4f2;
 			overflow: hidden;
 
 			.container {
 				width: 1200px;
 				text-align: center;
-			}
-
-			.flickity-page-dots {
-				display: none;
 			}
 		}
 
@@ -36,6 +32,15 @@ body {
 		height: 20px;
 		width: 0;
 		background: #333;
+	}
+	/* transparent circles */
+	.flickity-page-dots .dot {
+		opacity: 1;
+		background: transparent;
+	}
+	/* fill-in selected dot */
+	.flickity-page-dots .dot.is-selected {
+		background: transparent;
 	}
 }
 
