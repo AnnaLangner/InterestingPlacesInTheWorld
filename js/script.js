@@ -37,7 +37,7 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
-var templateCarousel = document.getElementById('template-carousel').innerHTML;
+
 var templateSlide = document.getElementById('template-carousel-slide').innerHTML;
 
 Mustache.parse(templateSlide);
@@ -50,10 +50,10 @@ for(var i = 0; i < carouselData.length; i++){
 
 }
 
-var fullCarousel = Mustache.render(templateSlide, {carousel: listSlide});
+// var fullCarousel = Mustache.render(templateSlide, {carousel: listSlide});
 
-var results = document.getElementById('results');
+// var results = document.getElementById('results');
 
-results.insertAdjacentHTML('beforeend', fullCarousel );
+results.innerHTML = listSlide;
 
 })(); 
