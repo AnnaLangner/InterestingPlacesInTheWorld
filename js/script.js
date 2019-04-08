@@ -10,7 +10,7 @@ var flkty = new Flickity( carousel, {
   hash: true,
 });
 
-var imgs = carousel.querySelectorAll('.carousel-cell img');
+/*var imgs = carousel.querySelectorAll('.carousel-cell img');
 // get transform property
 var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
@@ -22,7 +22,7 @@ flkty.on( 'scroll', function() {
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-});
+});*/
 
 var restartButton = document.querySelector('.bntRestart');
 
