@@ -10,20 +10,6 @@ var flkty = new Flickity( carousel, {
   hash: true,
 });
 
-/*var imgs = carousel.querySelectorAll('.carousel-cell img');
-// get transform property
-var docStyle = document.documentElement.style;
-var transformProp = typeof docStyle.transform == 'string' ?
-  'transform' : 'WebkitTransform';
-
-flkty.on( 'scroll', function() {
-  flkty.slides.forEach( function( slide, i ) {
-    var img = imgs[i];
-    var x = ( slide.target + flkty.x ) * -1/3;
-    img.style[ transformProp ] = 'translateX(' + x  + 'px)';
-  });
-});*/
-
 var restartButton = document.querySelector('.bntRestart');
 
 restartButton.addEventListener( 'click', function() {
@@ -49,10 +35,6 @@ for(var i = 0; i < carouselData.length; i++){
 	listSlide += Mustache.render(templateSlide, carouselData[i]);
 
 }
-
-// var fullCarousel = Mustache.render(templateSlide, {carousel: listSlide});
-
-// var results = document.getElementById('results');
 
 results.innerHTML = listSlide;
 
