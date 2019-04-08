@@ -2,6 +2,17 @@ body {
 	.button-carousel {
 		display: inline-block;		
 		margin-bottom: 20px;
+
+		.bntRestart {
+			padding: 5px 15px;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 600;
+			color: #006699;
+			background-color: #66CCFF;
+			border: 3px solid #3399CC;
+			border-radius: 4px;
+		}
 	}
 
 	.main-carousel {
