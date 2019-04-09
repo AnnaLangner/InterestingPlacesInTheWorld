@@ -30,6 +30,7 @@ var restartButton = document.querySelector('.bntRestart');
 
 restartButton.addEventListener( 'click', function() {
   flkty.next( true );
+  flkty.select( 0 );
 });
 
 var progressBar = document.querySelector('.progress-bar')
@@ -52,6 +53,10 @@ window.initMap = function() {
 			position: item.coords,
 			map: map
 		});
+		marker.addListener('click', function(){
+			flkty.next( true );
+  			flkty.select( item );
+		});		
 	});
 }
 
