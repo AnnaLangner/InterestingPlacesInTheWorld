@@ -24,4 +24,6 @@ body #mapWrapper { max-width: 100%; margin: 0 auto; overflow: hidden; }
 
 body #mapWrapper #map { width: 100%; height: 400px; }
 
+body #mapWrapper h3 { text-align: center; }
+
 @media screen and (min-width: 768px) { .main-carousel img { height: 400px; } }
