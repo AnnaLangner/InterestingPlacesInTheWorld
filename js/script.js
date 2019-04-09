@@ -39,4 +39,15 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+// Initialize and add the map
+window.initMap = function() {
+		
+	var map = new google.maps.Map(document.getElementById('map'));
+	
+	var marker = new google.maps.Marker({
+		position: coords,
+		map: map
+	}); 
+}
+
 })(); 

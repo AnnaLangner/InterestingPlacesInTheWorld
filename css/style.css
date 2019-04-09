@@ -22,4 +22,8 @@ body .flickity-page-dots .dot { opacity: 1; background: transparent; }
 
 body .flickity-page-dots .dot.is-selected { background: transparent; }
 
+body .mapWrapper { max-width: 400px; margin: 0 auto; position: relative; }
+
+body .mapWrapper h3 .map { position: absolute; overflow: visible; width: 100%; height: 50vh; background-color: #f4f4f2; top: 0; left: 0; z-index: 1; }
+
 @media screen and (min-width: 768px) { .main-carousel img { height: 400px; } }
