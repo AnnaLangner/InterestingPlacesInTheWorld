@@ -56,7 +56,12 @@ window.initMap = function() {
 		marker.addListener('click', function(){
 			flkty.next( true );
   			flkty.select( item );
-		});		
+		});	
+		flkty.on( 'change', function( item ) {
+			progress = Math.max( 0, Math.min( 1, progress ) );
+		});	
+
+		
 	});
 }
 
