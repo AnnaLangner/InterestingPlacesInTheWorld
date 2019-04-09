@@ -48,6 +48,7 @@ window.initMap = function() {
 	  	zoom: 8
 	});
 
+	var i = 0;
 	carouselData.forEach(function(item) {
 		var marker = new google.maps.Marker({
 			position: item.coords,
@@ -55,14 +56,15 @@ window.initMap = function() {
 		});
 		marker.addListener('click', function(){
 			flkty.next( true );
-  			flkty.select( item );
+			console.log(i);
+  			flkty.select( i );
 		});	
-		flkty.on( 'change', function( item ) {
-			progress = Math.max( 0, Math.min( 1, progress ) );
-		});	
-
-		
+		i = i + 1;
 	});
+
+	flkty.on( 'change', function( index ) {
+		map.setCenter(carouselData[index].coords);
+	});	
 }
 
 })(); 
