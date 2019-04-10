@@ -48,22 +48,23 @@ window.initMap = function() {
 	  	zoom: 8
 	});
 
-	var i = 0;
-	carouselData.forEach(function(item) {
+	
+	carouselData.forEach(function(item, index) {
 		var marker = new google.maps.Marker({
 			position: item.coords,
 			map: map
 		});
 		marker.addListener('click', function(){
 			flkty.next( true );
-			console.log(i);
-  			flkty.select( i );
+			console.log(index);
+  			flkty.select( index );
 		});	
-		i = i + 1;
+		
 	});
 
 	flkty.on( 'change', function( index ) {
 		map.setCenter(carouselData[index].coords);
+		map.setZoom(10);
 	});	
 }
 
